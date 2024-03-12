@@ -54,7 +54,7 @@ int main(void) {
 
 prints 25, instead of 11.
 
-There are also several weird behaviors when using function-like macros. See [wr001](CCD_weird_results.md#wr001)
+There are also several weird behaviors when using function-like macros. See [wr00](CCD_weird_results.md#wr00)
 
 
 # Extended Syntax
