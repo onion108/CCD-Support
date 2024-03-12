@@ -36,6 +36,27 @@ int main(void) {
 
 ```
 
+## Macros
+
+### Macros with Parameters
+C Code Develop doesn't support them well. It seems to treat macros with parameters as ordinary function, hence this code
+
+```c
+#include <stdio.h>
+#define SQUARE(X) X * X
+
+int main(void) {
+    int a = SQUARE(2+3);
+    printf("%d\n", a);
+}
+
+```
+
+prints 25, instead of 11.
+
+There are also several weird behaviors when using function-like macros. See [wr001](CCD_weird_results.md#wr001)
+
+
 # Extended Syntax
 
 ## C++ extension
