@@ -1,5 +1,47 @@
 # Unsupported Syntax
 
+## Statements
+
+C Code Develop seems not to support expression as a statement. i.e., the following code won't compile on C Code Develop:
+```c
+int main(void) {
+    int x, y;
+    5;
+    x = 3, y = 6;
+}
+```
+
+As a work-around, you can add parenthesis around the expression to make it valid for C Code Develop:
+```c
+int main(void) {
+    int x, y;
+    (5);
+    (x = 3, y = 6);
+}
+```
+
+C statements that are considered «valid» by C Code Develop are listed as following (tested, may not be complete):
+```c
+// A function call.
+my_function(arg1, arg2, arg3);
+
+// A single assignment.
+my_var = 5;
+my_struct.my_member = "Hello World! ";
+my_var += 1;
+
+// Expression inside parenthesis.
+(1 + 1);
+
+// Variable declaration.
+int a;
+const char *a, *b;
+
+// A single increment/decrement of a variable.
+a++;
+a--;
+```
+
 ## Expressions
 
 ### [Compound Literals](https://en.cppreference.com/w/c/language/compound_literal)
